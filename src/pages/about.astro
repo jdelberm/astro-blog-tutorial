@@ -1,5 +1,17 @@
 ---
+const pageTitle = "About the project";
+const identity = {
+    firstName: "Juan de Dios",
+    country: "Spain",
+    occupation: "IT Support in SAP",
+    hobbies: ["biking", "FPV", "Tech stuff"],
+};
 
+const skills = ["HTML", "C", "TypeScript", "Angular", "Shell"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
 <html lang="en">
@@ -8,11 +20,11 @@
         <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
         <meta name="viewport" content="width=device-width" />
         <meta name="generator" content={Astro.generator} />
-        <title>Astro</title>
+        <title>{pageTitle}</title>
     </head>
     <body>
-		<a href="/">Go to home page</a>
-        <h1>About this project</h1>
+        <a href="/">Go to home page</a>
+        <h1>{pageTitle}</h1>
         <h2>Why Astro?</h2>
         <p>
             Because I wanted to try the framework and evaluate the affinity it
@@ -24,5 +36,29 @@
             so in order to get the most out of it, I am following it step by
             step without leaving anything untied
         </p>
+        <h2>A little about myself</h2>
+        <ul>
+            <li>My name is {identity.firstName}</li>
+            <li>
+                I am from {identity.country} and I work as a {
+                    identity.occupation
+                }
+            </li>
+            {
+                identity.hobbies.length >= 2 && (
+                    <li>
+                        Two of my hobbies are: {identity.hobbies[0]} and{" "}
+                        {identity.hobbies[1]}
+                    </li>
+                )
+            }
+        </ul>
+        <p>My skills are:</p>
+        <ul>
+            {skills.map((skill) => <li>{skill}</li>)}
+        </ul>
+        {happy && <p>I am happy to be learning Astro!</p>}
+        {finished && <p>I finished this tutorial!</p>}
+        {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
     </body>
 </html>
