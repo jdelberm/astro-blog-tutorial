@@ -1,5 +1,46 @@
 ---
-const { url, title } = Astro.props;
+const { url, postData } = Astro.props;
 ---
 
-<li><a href={url}>{title}</a></li>
+<style>
+  .post-card {
+    list-style-type: none;
+    border-radius: 0 0 1rem 0;
+    border-right: 0.2rem outset white;
+    border-bottom: 0.2rem inset white;
+    margin: 0.5rem;
+    padding: 1rem;
+  }
+  .post-card a {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+  }
+  .post-card span {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .post-title {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .post-description {
+    margin: 1rem;
+  }
+</style>
+<li class="post-card">
+  <a href={url}>
+    <p class="post-title">
+      {postData.title}
+    </p>
+    <span>
+      <img src={postData.image.url} alt={postData.image.alt} width="100" />
+      <p class="post-description">
+        {postData.description}
+      </p>
+    </span>
+  </a>
+</li>
