@@ -1,3 +1,20 @@
+---
+const pages = [
+    {
+        url: "/",
+        title: "Home page"
+    },
+    {
+        url: "/about/",
+        title: "About"
+    },
+    {
+        url: "/blog/",
+        title: "Blog"
+    },
+]
+const currentPath = new URL(Astro.request.url).pathname;
+---
 <head>
     <style>
         #navbar{
@@ -12,6 +29,12 @@
             text-decoration: none;
             padding: 1rem;
         }
+        .active{
+            color: black;
+            background-color: white;
+            border-radius: 2rem;
+        }
+
         #navbar a:hover{
             animation: highlight 500ms forwards;
         }
@@ -32,8 +55,7 @@
 </head>
 <body>
     <nav id="navbar">
-        <a href="/">Go to home page</a>
-        <a href="/blog/">Blog</a>
-        <a href="/about/">About</a>
+        {pages.map((page, index) =>(<a href={page.url} class={currentPath == page.url ? "active" : ""}>{page.title}</a>))}
     </nav>
+    <hr>
 </body>
