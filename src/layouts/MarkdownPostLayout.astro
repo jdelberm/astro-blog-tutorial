@@ -4,9 +4,41 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 
+<style>
+    .description {
+        text-align: center;
+        font-style: italic;
+    }
+
+    .post-image {
+        display: block;
+        margin: 0 auto;
+    }
+
+    .publication-data {
+        text-align: center;
+    }
+
+    .publication-data p {
+        display: inline-block;
+        width: fit-content;
+        border-bottom: 2px solid purple;
+        border-radius: 2rem;
+        margin: 0 1rem;
+        padding: 0.5rem;
+    }
+</style>
 <BaseLayout pageTitle={frontmatter.title}>
-    <img src={frontmatter.image.url} alt={frontmatter.image.alt} width="300" />
-    <p>Written by {frontmatter.author}</p>
-    <p>Published on: {frontmatter.pubDate.slice(0, 10)}</p>
+    <img
+        class="post-image"
+        src={frontmatter.image.url}
+        alt={frontmatter.image.alt}
+        width="300"
+    />
+    <p class="description">{frontmatter.description}</p>
+    <div class="publication-data">
+        <p>Written by {frontmatter.author}</p>
+        <p>Published on: {frontmatter.pubDate.slice(0, 10)}</p>
+    </div>
     <slot />
 </BaseLayout>
