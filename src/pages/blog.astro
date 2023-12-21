@@ -1,17 +1,18 @@
 ---
 import "../styles/global.css";
-import BaseLayout from '../layouts/BaseLayout.astro';
-import BlogPost from '../components/BlogPost.astro';
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BlogPost from "../components/BlogPost.astro";
 
 const pageTitle = "Astroblog";
 const posts = await Astro.glob("./posts/*.md");
 ---
+
 <BaseLayout pageTitle={pageTitle}>
   <section class="card">
     <h2>Intro</h2>
     <p>
-      This tutorial is an introduction to the Astro framework, which can
-      easily work with react
+      This tutorial is an introduction to the Astro framework, which can easily
+      work with react
     </p>
   </section>
   <section class="card">
@@ -20,10 +21,12 @@ const posts = await Astro.glob("./posts/*.md");
       Here is a list of the already published post that you can visit by
       clicking the hyperlink
     </p>
-    <ul>
-      {posts.map((post)=>(
-        <BlogPost url={post.url} title={post.frontmatter.title} />
-      ))}
+    <ul class="posts-list">
+      {
+        posts.map((post) => (
+          <BlogPost url={post.url} postData={post.frontmatter} />
+        ))
+      }
     </ul>
   </section>
 </BaseLayout>
