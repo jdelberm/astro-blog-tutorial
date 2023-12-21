@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Social from "./Social.astro";
 
 const contactInfo = [
   {
@@ -31,50 +32,13 @@ const contactInfo = [
       flex-direction: row;
       justify-content: space-evenly;
     }
-
-    #contact-info a {
-      position: absolute;
-      text-transform: uppercase;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 0;
-    }
-    #contact-info a:hover {
-      animation: shake 300ms forwards;
-      text-decoration: underline;
-    }
-
-    @keyframes shake {
-      0% {
-      }
-      25% {
-        padding: 0 0.25rem 0;
-      }
-      50% {
-        padding: 0 0 0.25rem;
-      }
-      75% {
-        padding: 0 0.25rem 0;
-      }
-      100% {
-        padding: 0 0 0.25rem;
-      }
-    }
   </style>
 </head>
 <body>
   <footer id="page-footer">
     <p>Learn more about me on...</p>
     <div id="contact-info">
-      {
-        contactInfo.map((info, index) => (
-          <p>
-            <a target="_blank" href={info.url}>
-              {info.title}
-            </a>
-          </p>
-        ))
-      }
+      {contactInfo.map((info) => <Social url={info.url} title={info.title} />)}
     </div>
   </footer>
 </body>

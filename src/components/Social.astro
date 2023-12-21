@@ -1,0 +1,41 @@
+---
+const { url, title } = Astro.props;
+---
+
+<head>
+  <style>
+    a {
+      position: absolute;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0;
+    }
+    a:hover {
+      animation: shake 300ms forwards;
+      text-decoration: underline;
+    }
+
+    @keyframes shake {
+      0% {
+      }
+      25% {
+        padding: 0 0.25rem 0;
+      }
+      50% {
+        padding: 0 0 0.25rem;
+      }
+      75% {
+        padding: 0 0.25rem 0;
+      }
+      100% {
+        padding: 0 0 0.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <p>
+    <a target="_blank" href={url}>{title}</a>
+  </p>
+</body>
