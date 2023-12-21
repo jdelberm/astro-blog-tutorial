@@ -10,31 +10,18 @@ const { url, title } = Astro.props;
       font-weight: bold;
       margin: 0;
     }
-    a:hover {
-      animation: shake 300ms forwards;
-      text-decoration: underline;
-    }
 
-    @keyframes shake {
-      0% {
-      }
-      25% {
-        padding: 0 0.25rem 0;
-      }
-      50% {
-        padding: 0 0 0.25rem;
-      }
-      75% {
-        padding: 0 0.25rem 0;
-      }
-      100% {
-        padding: 0 0 0.25rem;
-      }
+    .horizontal-line{
+      color: purple;
     }
+    
   </style>
 </head>
 <body>
+  <a class="link" target="_blank" href={url}>
   <span>
-    <a target="_blank" href={url}>{title}</a>
+    {title}
   </span>
+  <hr class="horizontal-line">
+</a>
 </body>
