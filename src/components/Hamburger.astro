@@ -1,9 +1,36 @@
 ---
 
 ---
+<style>
+  .hidden{
+    animation: hide 200ms forwards;
+  }
+
+  .tilted-down{
+    animation: tiltdown 500ms forwards;
+  }
+  
+  .tilted-up{
+    animation: tiltup 500ms forwards;
+  }   
+
+  @keyframes hide {
+    from{opacity: 100%}
+    to{opacity: 0%}
+  }
+
+  @keyframes tiltdown {
+    from{transform: rotate(0) translate(0, 0);}
+    to{transform: rotate(-45deg) translate(-1rem, 1.5rem);}
+  }
+  @keyframes tiltup {
+    from{transform: rotate(0) translate(0, 0);}
+    to{transform: rotate(45deg) translate(0.2rem, -0.3rem);}
+  }
+</style>
 
 <div class="hamburger">
-  <span class="line"></span>
-  <span class="line"></span>
-  <span class="line"></span>
+  <span class="line upper"></span>
+  <span class="line middle"></span>
+  <span class="line lower"></span>
 </div>
