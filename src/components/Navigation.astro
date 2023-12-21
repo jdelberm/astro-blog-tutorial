@@ -18,10 +18,9 @@ const currentPath = new URL(Astro.request.url).pathname;
 
 <head>
   <style>
-    #navbar {
+    .navbar {
       width: 100%;
       padding: 1rem;
-      display: flex;
       justify-content: space-evenly;
     }
 
@@ -37,7 +36,7 @@ const currentPath = new URL(Astro.request.url).pathname;
       border-radius: 2rem 0;
     }
 
-    #navbar a:hover:not(.active) {
+    .navbar a:hover:not(.active) {
       animation: highlight 250ms forwards;
     }
 
@@ -56,7 +55,7 @@ const currentPath = new URL(Astro.request.url).pathname;
   </style>
 </head>
 <body>
-  <div id="navbar">
+  <div class="navbar">
     {
       pages.map((page, index) => (
         <a href={page.url} class={currentPath == page.url ? "active" : ""}>
