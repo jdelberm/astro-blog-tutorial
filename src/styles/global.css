@@ -1,40 +1,46 @@
 html {
-    background-color: black;
-    color: white;
-    font-family: sans-serif;
-    overflow-y: scroll;
+  background-color: black;
+  color: white;
+  font-family: sans-serif;
+  overflow-y: scroll;
 }
 
 body {
-    margin: 0 auto;
-    max-width: 40rem;
-    padding: 1rem;
+  margin: 0 auto;
+  max-width: 40rem;
+  padding: 1rem;
 }
 
-.card{
-    border: 4px black;
-    border-radius: 2rem;
-    padding: 0.2rem 1.5rem;
-    margin: 1rem 0;
-    background: linear-gradient(90deg, rgba(101,9,121,0.3) 0%, rgba(82,9,121,1) 100%);
+.card {
+  border: 4px black;
+  border-radius: 2rem;
+  padding: 0.2rem 1.5rem;
+  margin: 1rem 0;
+  background: linear-gradient(
+    90deg,
+    rgba(101, 9, 121, 0.3) 0%,
+    rgba(82, 9, 121, 1) 100%
+  );
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1 {
-    margin: 1rem 0;
-    font-size: 2.5rem;
+  margin: 1rem 0;
+  font-size: 2.5rem;
 }
 
 h2 {
-    margin: 2rem 0;
+  margin: 2rem 0;
 }
-h1, h2, h3{
-    text-align: center;
+h1,
+h2,
+h3 {
+  text-align: center;
 }
 
 a {
-    color: white;
+  color: white;
 }
