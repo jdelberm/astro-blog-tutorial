@@ -1,6 +1,80 @@
-<footer>
-  <p>
-    Learn more about my projects on <a target="blank"
-      href="https://www.github.com/withastro">github</a>
-  </p>
-</footer>
+---
+import "../styles/global.css";
+
+const contactInfo = [
+  {
+    url: "https://es.linkedin.com/in/juan-de-dios-delgado-berm%C3%BAdez-4a2b90160",
+    title: "Linkedin",
+    svgIcon: "linkedin",
+  },
+  {
+    url: "https://github.com/jdelberm",
+    title: "Github",
+    svgIcon: "github",
+  },
+  {
+    url: "mailto:jdelgado.berm@gmail.com",
+    title: "Mail",
+    svgIcon: "mail",
+  },
+];
+---
+
+<head>
+  <style>
+    #page-footer {
+      text-align: center;
+    }
+
+    #contact-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-evenly;
+    }
+
+    #contact-info a {
+      position: absolute;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 0;
+    }
+    #contact-info a:hover {
+      animation: shake 300ms forwards;
+      text-decoration: underline;
+    }
+
+    @keyframes shake {
+      0% {
+      }
+      25% {
+        padding: 0 0.25rem 0;
+      }
+      50% {
+        padding: 0 0 0.25rem;
+      }
+      75% {
+        padding: 0 0.25rem 0;
+      }
+      100% {
+        padding: 0 0 0.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <footer id="page-footer">
+    <p>Learn more about me on...</p>
+    <div id="contact-info">
+      {
+        contactInfo.map((info, index) => (
+          <p>
+            <a target="_blank" href={info.url}>
+              {info.title}
+            </a>
+          </p>
+        ))
+      }
+    </div>
+  </footer>
+</body>
