@@ -45,3 +45,6 @@ All commands are run from the root of the project, from a terminal:
 ## 👀 Want to learn more?
 
 Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+
+## Want to have a quick glance at the project?
+[Take a look here](https://astrotutorialjdelber.netlify.app/). The page is uploaded to Netlify and synchronized with the repository.
