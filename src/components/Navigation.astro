@@ -29,26 +29,27 @@ const currentPath = new URL(Astro.request.url).pathname;
             text-decoration: none;
             padding: 1rem;
         }
+
         .active{
             color: black;
             background-color: white;
-            border-radius: 2rem;
+            border-radius: 2rem 0;
         }
 
-        #navbar a:hover{
-            animation: highlight 500ms forwards;
+        #navbar a:hover:not(.active){
+            animation: highlight 250ms forwards;
         }
 
         @keyframes highlight{
-            from{
+            0% {
                 background-color: none;
                 color: white;
                 border-radius: 0.2rem;
             }
-            to {
+            100% {
                 color: black;
+                border-radius: 2rem 0;
                 background-color: white;
-                border-radius: 2rem;
             }
         }
     </style>
