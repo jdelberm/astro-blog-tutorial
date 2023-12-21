@@ -1,21 +1,27 @@
 ---
-import '../styles/global.css'
+import "../styles/global.css";
 const pageTitle = "Home page";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<a href="/blog/">Blog</a>
-		<a href="/about/">About</a>
-		<h1>Astro blog tutorial</h1>
-		<p class="card">This tutorial aims to show the basics of the astro framework</p>
-		<p class="card">The Astro app is hosted in Netlify, so any changes commit will be automatically reflected in their host service</p>
-	</body>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+  <body>
+    <a href="/blog/">Blog</a>
+    <a href="/about/">About</a>
+    <h1>Astro blog tutorial</h1>
+    <section class="card">
+      <h2>Objective</h2>
+      <p>This tutorial aims to show the basics of the astro framework</p>
+      <p>
+        The Astro app is hosted in Netlify, so any changes commit will be
+        automatically reflected in their host service
+      </p>
+    </section>
+  </body>
 </html>

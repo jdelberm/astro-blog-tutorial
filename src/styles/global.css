@@ -13,8 +13,9 @@ body {
 .card{
     border: 4px black;
     border-radius: 2rem;
-    padding: 1rem 1.5rem;
-    background-color: purple;
+    padding: 0.2rem 1.5rem;
+    margin: 1rem;
+    background: linear-gradient(90deg, rgba(101,9,121,0.3) 0%, rgba(82,9,121,1) 100%);
 }
 
 * {
