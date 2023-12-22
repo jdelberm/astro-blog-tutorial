@@ -1,6 +1,4 @@
 html {
-  background-color: black;
-  color: white;
   font-family: sans-serif;
   overflow-y: scroll;
 }
@@ -42,7 +40,6 @@ h3 {
 }
 
 a {
-  color: white;
 }
 
 .hamburger {
