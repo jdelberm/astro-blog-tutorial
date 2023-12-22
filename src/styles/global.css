@@ -3,6 +3,15 @@ html {
   overflow-y: scroll;
 }
 
+html.dark{
+	background-color: black;
+	color: #fff;
+}
+
+.dark.navbar{
+	color: #fff;
+}
+
 body {
   margin: 0 auto;
   max-width: 40rem;
