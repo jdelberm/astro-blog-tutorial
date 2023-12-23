@@ -3,18 +3,19 @@
 ---
 
 <style>
-  .hidden {
-    animation: hide 200ms forwards;
-  }
+  .cross {
+    .middle {
+      animation: hide 200ms forwards;
+    }
 
-  .tilted-down {
-    animation: tiltdown 500ms forwards;
-  }
+    .upper {
+      animation: tiltdown 500ms forwards;
+    }
 
-  .tilted-up {
-    animation: tiltup 500ms forwards;
+    .lower {
+      animation: tiltup 500ms forwards;
+    }
   }
-
   @keyframes hide {
     from {
       opacity: 100%;
