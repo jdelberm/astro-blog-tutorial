@@ -1,15 +1,43 @@
 html {
   font-family: sans-serif;
   overflow-y: scroll;
+
+  a {
+    color: black;
+  }
+
+  .active {
+    color: white;
+    background-color: black;
+    border-radius: 2rem 0;
+  }
+
+  .navbar a:hover:not(.active) {
+    animation: highlight 250ms forwards;
+  }
 }
 
-html.dark{
-	background-color: black;
-	color: #fff;
+html.dark {
+  background-color: black;
+  color: white;
+
+  a {
+    color: white;
+  }
+
+  .active {
+    color: black;
+    background-color: white;
+    border-radius: 2rem 0;
+  }
+
+  .navbar a:hover:not(.active) {
+    animation: dark-highlight 250ms forwards;
+  }
 }
 
-.dark.navbar{
-	color: #fff;
+.dark.navbar {
+  color: #fff;
 }
 
 body {
@@ -23,11 +51,9 @@ body {
   border-radius: 2rem;
   padding: 0.2rem 1.5rem;
   margin: 1rem 0;
-  background: linear-gradient(
-    90deg,
-    rgba(101, 9, 121, 0.3) 0%,
-    rgba(82, 9, 121, 1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(101, 9, 121, 0.3) 0%,
+      rgba(82, 9, 121, 1) 100%);
 }
 
 * {
@@ -42,13 +68,11 @@ h1 {
 h2 {
   margin: 2rem 0;
 }
+
 h1,
 h2,
 h3 {
   text-align: center;
-}
-
-a {
 }
 
 .hamburger {
@@ -82,6 +106,7 @@ a {
   display: flex;
   flex-wrap: wrap;
 }
+
 .tag-card {
   text-decoration: none;
   margin: 0.5rem;
