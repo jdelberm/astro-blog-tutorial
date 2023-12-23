@@ -4,10 +4,19 @@ import Hamburger from "./Hamburger.astro";
 import ThemeIcon from "./ThemeIcon.astro";
 ---
 
+<style>
+  .header-nav,
+  .header-icons {
+    display: flex;
+    flex-direction: row;
+  }
+</style>
 <header>
-  <nav>
-    <ThemeIcon />
-    <Hamburger />
+  <nav class="header-nav">
+    <span class="header-icons">
+      <ThemeIcon />
+      <Hamburger />
+    </span>
     <Navigation />
   </nav>
 </header>
