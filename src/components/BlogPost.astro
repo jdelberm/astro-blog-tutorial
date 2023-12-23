@@ -20,6 +20,10 @@ const { url, postData } = Astro.props;
     flex-direction: row;
   }
 
+  .post-image {
+    background-color: black;
+  }
+
   .post-title {
     text-transform: uppercase;
     font-weight: bold;
@@ -36,7 +40,12 @@ const { url, postData } = Astro.props;
       {postData.title}
     </p>
     <span>
-      <img src={postData.image.url} alt={postData.image.alt} width="100" />
+      <img
+        class="post-image"
+        src={postData.image.url}
+        alt={postData.image.alt}
+        width="100"
+      />
       <p class="post-description">
         {postData.description}
       </p>
