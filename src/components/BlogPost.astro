@@ -7,8 +7,9 @@ const { url, postData } = Astro.props;
     list-style-type: none;
     border-radius: 1rem;
     border: 0.2rem outset;
-    margin: 0.5rem;
+    margin: 2rem auto;
     padding: 1rem;
+    max-width: 30rem;
   }
   .post-card a {
     text-decoration: none;
@@ -34,7 +35,7 @@ const { url, postData } = Astro.props;
     margin: 1rem;
   }
 </style>
-<li class="post-card">
+<li class="card post-card">
   <a href={url}>
     <p class="post-title">
       {postData.title}
@@ -44,7 +45,8 @@ const { url, postData } = Astro.props;
         class="post-image"
         src={postData.image.url}
         alt={postData.image.alt}
-        width="100"
+        width="100px"
+        height="auto"
       />
       <p class="post-description">
         {postData.description}
