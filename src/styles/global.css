@@ -1,6 +1,19 @@
+/* Custom fonts */
+
+@font-face {
+	font-family: 'RussoOne';
+	src: url('/fonts/Russo_One/RussoOne-Regular.ttf') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
 html {
+	height: 100%;
+	width: 100%;
 	font-family: sans-serif;
 	overflow-y: scroll;
+	background-color: #FFFFFF;
 
 	a {
 		color: black;
@@ -10,6 +23,15 @@ html {
 		color: white;
 		background-color: black;
 		border-radius: 2rem 0;
+	}
+
+	.header-nav {
+		background-color: #E5E5E5;
+		box-shadow: 3rem black;
+
+		a {
+			font-family: "RussoOne";
+		}
 	}
 
 	.navbar a:hover:not(.active) {
@@ -29,10 +51,28 @@ html.dark {
 		color: white;
 	}
 
+
+
+	h1,
+	h2,
+	h3,
+	h4 {
+		color: #FCA311;
+	}
+
 	.active {
 		color: black;
 		background-color: white;
 		border-radius: 2rem 0;
+	}
+
+	.header-nav {
+		background-color: #14213D;
+		box-shadow: 3rem black;
+
+		a {
+			font-family: "RussoOne";
+		}
 	}
 
 	.navbar a:hover:not(.active) {
@@ -50,7 +90,10 @@ html.dark {
 
 body {
 	margin: 0 auto;
-	max-width: 40rem;
+	padding: 0rem;
+}
+
+.content {
 	padding: 1rem;
 }
 
@@ -58,10 +101,9 @@ body {
 	border: 4px black;
 	border-radius: 2rem;
 	padding: 0.2rem 1.5rem;
-	margin: 1rem 0;
-	background: linear-gradient(90deg,
-			rgba(101, 9, 121, 0.3) 0%,
-			rgba(82, 9, 121, 1) 100%);
+	margin: 1rem auto;
+	background: rgb(25, 42, 77);
+	background: linear-gradient(126deg, rgba(25, 42, 77, 0.3) 0%, rgba(10, 17, 31, 1) 100%);
 }
 
 * {
@@ -124,6 +166,10 @@ h3 {
 }
 
 @media screen and (min-width: 636px) {
+	body {
+		padding: 0rem;
+	}
+
 	.hamburger {
 		display: none;
 	}

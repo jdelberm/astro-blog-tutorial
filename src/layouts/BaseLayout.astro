@@ -13,10 +13,23 @@ const { pageTitle } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <style>
+      .content {
+        margin: 0 auto;
+        max-width: 50rem;
+      }
+
+      body {
+        height: 100%;
+        width: 100%;
+      }
+    </style>
   </head>
   <body>
     <Header />
-    <slot />
+    <div class="content">
+      <slot />
+    </div>
     <Footer />
     <script>
       import "../scripts/menu.js";
