@@ -1,148 +1,144 @@
 html {
 	font-family: sans-serif;
 	overflow-y: scroll;
-  
+
 	a {
-	  color: black;
+		color: black;
 	}
-  
+
 	.active {
-	  color: white;
-	  background-color: black;
-	  border-radius: 2rem 0;
+		color: white;
+		background-color: black;
+		border-radius: 2rem 0;
 	}
-  
+
 	.navbar a:hover:not(.active) {
-	  animation: highlight 250ms forwards;
+		animation: highlight 250ms forwards;
 	}
-  
+
 	.hamburger .line {
-	  background-color: black;
+		background-color: black;
 	}
-  }
-  
-  html.dark {
+}
+
+html.dark {
 	background-color: black;
 	color: white;
-  
+
 	a {
-	  color: white;
+		color: white;
 	}
-  
+
 	.active {
-	  color: black;
-	  background-color: white;
-	  border-radius: 2rem 0;
+		color: black;
+		background-color: white;
+		border-radius: 2rem 0;
 	}
-  
+
 	.navbar a:hover:not(.active) {
-	  animation: dark-highlight 250ms forwards;
+		animation: dark-highlight 250ms forwards;
 	}
-  
+
 	.hamburger .line {
-	  background-color: white;
+		background-color: white;
 	}
-  }
-  
-  .dark.navbar {
+}
+
+.dark.navbar {
 	color: #fff;
-  }
-  
-  body {
+}
+
+body {
 	margin: 0 auto;
 	max-width: 40rem;
 	padding: 1rem;
-  }
-  
-  .card {
+}
+
+.card {
 	border: 4px black;
 	border-radius: 2rem;
 	padding: 0.2rem 1.5rem;
 	margin: 1rem 0;
-	background: linear-gradient(
-	  90deg,
-	  rgba(101, 9, 121, 0.3) 0%,
-	  rgba(82, 9, 121, 1) 100%
-	);
-  }
-  
-  * {
+	background: linear-gradient(90deg,
+			rgba(101, 9, 121, 0.3) 0%,
+			rgba(82, 9, 121, 1) 100%);
+}
+
+* {
 	box-sizing: border-box;
-  }
-  
-  h1 {
+}
+
+h1 {
 	margin: 1rem 0;
 	font-size: 2.5rem;
-  }
-  
-  h2 {
+}
+
+h2 {
 	margin: 2rem 0;
-  }
-  
-  h1,
-  h2,
-  h3 {
+}
+
+h1,
+h2,
+h3 {
 	text-align: center;
-  }
-  
-  .hamburger {
+}
+
+.hamburger {
 	padding-right: 20px;
 	cursor: pointer;
-  }
-  
-  .hamburger .line {
+}
+
+.hamburger .line {
 	display: block;
 	width: 40px;
 	height: 5px;
-	margin-bottom: 10px;
-  }
-  
-  .navbar {
+}
+
+.navbar {
 	display: none;
 	flex-direction: column;
 	text-align: center;
-  }
-  
-  .navbar a {
+}
+
+.navbar a {
 	margin: 0.2rem;
-  }
-  
-  .expanded {
+}
+
+.expanded {
 	display: flex;
-  }
-  
-  .tags-container {
+}
+
+.tags-container {
 	display: flex;
 	flex-wrap: wrap;
-  }
-  
-  .tag-card {
+}
+
+.tag-card {
 	text-decoration: none;
 	margin: 0.5rem;
-  }
-  
-  .header-nav {
+}
+
+.header-nav {
 	display: flex;
 	flex-direction: column;
-  }
-  
-  @media screen and (min-width: 636px) {
+}
+
+@media screen and (min-width: 636px) {
 	.hamburger {
-	  display: none;
+		display: none;
 	}
-  
+
 	.header-nav {
-	  display: flex;
-	  flex-direction: row;
+		display: flex;
+		flex-direction: row;
 	}
-  
+
 	.navbar {
-	  display: flex;
-	  flex-direction: row;
+		display: flex;
+		flex-direction: row;
 	}
-  
+
 	.navbar a {
-	  margin: 0;
+		margin: 0;
 	}
-  }
-  
+}
