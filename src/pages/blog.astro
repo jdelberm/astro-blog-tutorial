@@ -7,11 +7,6 @@ const pageTitle = "Astroblog";
 const posts = await Astro.glob("./posts/*.md");
 ---
 
-<style>
-  .posts-list {
-    padding-inline-start: 0;
-  }
-</style>
 <BaseLayout pageTitle={pageTitle}>
   <section class="card">
     <h2>Intro</h2>
