@@ -51,8 +51,6 @@ html.dark {
     color: white;
   }
 
-
-
   h1,
   h2,
   h3,
@@ -82,6 +80,24 @@ html.dark {
   .hamburger .line {
     background-color: white;
   }
+
+  .card {
+    border: 4px black;
+    border-radius: 2rem;
+    padding: 0.2rem 1.5rem;
+    margin: 1rem auto;
+    background: rgb(25, 42, 77);
+    background: linear-gradient(126deg, rgba(25, 42, 77, 0.3) 0%, rgba(10, 17, 31, 1) 100%);
+  }
+}
+
+.card {
+  border: 4px black;
+  border-radius: 2rem;
+  padding: 0.2rem 1.5rem;
+  margin: 1rem auto;
+  background: rgb(25, 42, 77);
+  background: linear-gradient(126deg, rgb(229, 229, 229, 0.2) 0%, rgba(229, 229, 229, 0.8) 100%);
 }
 
 .dark.navbar {
@@ -95,15 +111,6 @@ body {
 
 .content {
   padding: 1rem;
-}
-
-.card {
-  border: 4px black;
-  border-radius: 2rem;
-  padding: 0.2rem 1.5rem;
-  margin: 1rem auto;
-  background: rgb(25, 42, 77);
-  background: linear-gradient(126deg, rgba(25, 42, 77, 0.3) 0%, rgba(10, 17, 31, 1) 100%);
 }
 
 * {
