@@ -1,190 +1,190 @@
 /* Custom fonts */
 
 @font-face {
-	font-family: 'RussoOne';
-	src: url('/fonts/Russo_One/RussoOne-Regular.ttf') format('woff');
-	font-weight: normal;
-	font-style: normal;
-	font-display: swap;
+  font-family: 'RussoOne';
+  src: url('/fonts/Russo_One/RussoOne-Regular.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 html {
-	height: 100%;
-	width: 100%;
-	font-family: sans-serif;
-	overflow-y: scroll;
-	background-color: #FFFFFF;
+  height: 100%;
+  width: 100%;
+  font-family: sans-serif;
+  overflow-y: scroll;
+  background-color: #FFFFFF;
 
-	a {
-		color: black;
-	}
+  a {
+    color: black;
+  }
 
-	.active {
-		color: white;
-		background-color: black;
-		border-radius: 2rem 0;
-	}
+  .active {
+    color: white;
+    background-color: black;
+    border-radius: 2rem 0;
+  }
 
-	.header-nav {
-		background-color: #E5E5E5;
-		box-shadow: 3rem black;
+  .header-nav {
+    background-color: #E5E5E5;
+    box-shadow: 3rem black;
 
-		a {
-			font-family: "RussoOne";
-		}
-	}
+    a {
+      font-family: "RussoOne";
+    }
+  }
 
-	.navbar a:hover:not(.active) {
-		animation: highlight 250ms forwards;
-	}
+  .navbar a:hover:not(.active) {
+    animation: highlight 250ms forwards;
+  }
 
-	.hamburger .line {
-		background-color: black;
-	}
+  .hamburger .line {
+    background-color: black;
+  }
 }
 
 html.dark {
-	background-color: black;
-	color: white;
+  background-color: black;
+  color: white;
 
-	a {
-		color: white;
-	}
+  a {
+    color: white;
+  }
 
 
 
-	h1,
-	h2,
-	h3,
-	h4 {
-		color: #FCA311;
-	}
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #FCA311;
+  }
 
-	.active {
-		color: black;
-		background-color: white;
-		border-radius: 2rem 0;
-	}
+  .active {
+    color: black;
+    background-color: white;
+    border-radius: 2rem 0;
+  }
 
-	.header-nav {
-		background-color: #14213D;
-		box-shadow: 3rem black;
+  .header-nav {
+    background-color: #14213D;
+    box-shadow: 3rem black;
 
-		a {
-			font-family: "RussoOne";
-		}
-	}
+    a {
+      font-family: "RussoOne";
+    }
+  }
 
-	.navbar a:hover:not(.active) {
-		animation: dark-highlight 250ms forwards;
-	}
+  .navbar a:hover:not(.active) {
+    animation: dark-highlight 250ms forwards;
+  }
 
-	.hamburger .line {
-		background-color: white;
-	}
+  .hamburger .line {
+    background-color: white;
+  }
 }
 
 .dark.navbar {
-	color: #fff;
+  color: #fff;
 }
 
 body {
-	margin: 0 auto;
-	padding: 0rem;
+  margin: 0 auto;
+  padding: 0rem;
 }
 
 .content {
-	padding: 1rem;
+  padding: 1rem;
 }
 
 .card {
-	border: 4px black;
-	border-radius: 2rem;
-	padding: 0.2rem 1.5rem;
-	margin: 1rem auto;
-	background: rgb(25, 42, 77);
-	background: linear-gradient(126deg, rgba(25, 42, 77, 0.3) 0%, rgba(10, 17, 31, 1) 100%);
+  border: 4px black;
+  border-radius: 2rem;
+  padding: 0.2rem 1.5rem;
+  margin: 1rem auto;
+  background: rgb(25, 42, 77);
+  background: linear-gradient(126deg, rgba(25, 42, 77, 0.3) 0%, rgba(10, 17, 31, 1) 100%);
 }
 
 * {
-	box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1 {
-	margin: 1rem 0;
-	font-size: 2.5rem;
+  margin: 1rem 0;
+  font-size: 2.5rem;
 }
 
 h2 {
-	margin: 2rem 0;
+  margin: 2rem 0;
 }
 
 h1,
 h2,
 h3 {
-	text-align: center;
+  text-align: center;
 }
 
 .hamburger {
-	padding-right: 20px;
-	cursor: pointer;
+  padding-right: 20px;
+  cursor: pointer;
 }
 
 .hamburger .line {
-	display: block;
-	width: 40px;
-	height: 5px;
+  display: block;
+  width: 40px;
+  height: 5px;
 }
 
 .navbar {
-	display: none;
-	flex-direction: column;
-	text-align: center;
+  display: none;
+  flex-direction: column;
+  text-align: center;
 }
 
 .navbar a {
-	margin: 0.2rem;
+  margin: 0.2rem;
 }
 
 .expanded {
-	display: flex;
+  display: flex;
 }
 
 .tags-container {
-	display: flex;
-	flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .tag-card {
-	text-decoration: none;
-	margin: 0.5rem;
+  text-decoration: none;
+  margin: 0.5rem;
 }
 
 .header-nav {
-	display: flex;
-	flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 636px) {
-	body {
-		padding: 0rem;
-	}
+  body {
+    padding: 0rem;
+  }
 
-	.hamburger {
-		display: none;
-	}
+  .hamburger {
+    display: none;
+  }
 
-	.header-nav {
-		display: flex;
-		flex-direction: row;
-	}
+  .header-nav {
+    display: flex;
+    flex-direction: row;
+  }
 
-	.navbar {
-		display: flex;
-		flex-direction: row;
-	}
+  .navbar {
+    display: flex;
+    flex-direction: row;
+  }
 
-	.navbar a {
-		margin: 0;
-	}
+  .navbar a {
+    margin: 0;
+  }
 }
