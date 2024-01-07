@@ -148,11 +148,13 @@ h3 {
   height: 5px;
 }
 
-.navbar {
-  display: none;
+.mobile-navbar {
   flex-direction: column;
   text-align: center;
-  transition: height 500ms;
+  transition: height 250ms 50ms, opacity 100ms ease-in 250ms;
+  height: 0;
+  transform: translateY(-20rem);
+  opacity: 0;
 }
 
 .navbar a {
@@ -161,6 +163,9 @@ h3 {
 
 .expanded {
   display: flex;
+  height: 15rem;
+  opacity: 100%;
+  transform: translateY(0);
 }
 
 .tags-container {

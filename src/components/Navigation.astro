@@ -18,6 +18,8 @@ const pages = [
   },
 ];
 const currentPath = new URL(Astro.request.url).pathname;
+
+const { isMobile } = Astro.props;
 ---
 
 <head>
@@ -65,7 +67,7 @@ const currentPath = new URL(Astro.request.url).pathname;
   </style>
 </head>
 <body>
-  <div class="navbar">
+  <div class="navbar" class:list={[{ "mobile-navbar": isMobile }]}>
     {
       pages.map((page, index) => (
         <a

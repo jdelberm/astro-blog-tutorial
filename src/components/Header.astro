@@ -21,7 +21,7 @@ const title = currentPath.split("/")[1].toUpperCase();
 <header>
   <nav class="header-nav">
     <span class="mobile-item">
-      <span class="header-icons">
+      <div class="header-icons">
         <Hamburger />
         <span style="margin: 0 auto;">
           <h1 class="title-mobile page-title">
@@ -29,8 +29,8 @@ const title = currentPath.split("/")[1].toUpperCase();
           </h1>
         </span>
         <ThemeIcon />
-      </span>
-      <Navigation />
+      </div>
+      <Navigation isMobile="true" />
     </span>
     <span class="desktop-item">
       <Navigation />
