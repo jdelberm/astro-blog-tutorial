@@ -185,17 +185,21 @@ h3 {
   background-color: black;
 }
 
+.desktop-item {
+  display: none;
+}
+
 @media screen and (min-width: 636px) {
   body {
     padding: 0rem;
   }
 
-  .hamburger {
+  .mobile-item {
     display: none;
   }
 
-  .title-mobile {
-    display: none;
+  .desktop-item {
+    display: contents;
   }
 
   .header-nav {
