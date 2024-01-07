@@ -69,7 +69,10 @@ const currentPath = new URL(Astro.request.url).pathname;
   <div class="navbar">
     {
       pages.map((page, index) => (
-        <a href={page.url} class={currentPath == page.url ? "active" : ""}>
+        <a
+          href={page.url}
+          class={`page-title ${currentPath == page.url ? "active" : ""}`}
+        >
           {page.title}
         </a>
       ))

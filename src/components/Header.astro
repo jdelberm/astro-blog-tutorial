@@ -2,6 +2,26 @@
 import Navigation from "./Navigation.astro";
 import Hamburger from "./Hamburger.astro";
 import ThemeIcon from "./ThemeIcon.astro";
+
+const pages = [
+  {
+    url: "/",
+    title: "Home page",
+  },
+  {
+    url: "/about/",
+    title: "About",
+  },
+  {
+    url: "/blog/",
+    title: "Blog",
+  },
+  {
+    url: "/tags/",
+    title: "Tags",
+  },
+];
+const currentPath = new URL(Astro.request.url).pathname;
 ---
 
 <style>
@@ -13,6 +33,7 @@ import ThemeIcon from "./ThemeIcon.astro";
     display: flex;
     flex-direction: row;
     padding: 1rem;
+    align-items: center;
   }
 </style>
 <header>
@@ -20,6 +41,11 @@ import ThemeIcon from "./ThemeIcon.astro";
     <span class="header-icons">
       <ThemeIcon />
       <Hamburger />
+      <span style="margin: 0 auto;">
+        <h1 class="title-mobile page-title">
+          {pages.find((x) => x.url == currentPath).title}
+        </h1>
+      </span>
     </span>
     <Navigation />
   </nav>
