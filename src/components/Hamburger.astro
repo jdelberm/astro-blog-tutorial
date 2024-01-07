@@ -3,41 +3,22 @@
 ---
 
 <style>
+  .line {
+    transition:
+      opacity 175ms,
+      transform 350ms;
+  }
+
   .cross {
     .middle {
-      animation: hide 200ms forwards;
+      opacity: 0%;
     }
 
     .upper {
-      animation: tiltdown 500ms forwards;
+      transform: rotate(-45deg) translate(-0.8rem, 0.35rem);
     }
 
     .lower {
-      animation: tiltup 500ms forwards;
-    }
-  }
-  @keyframes hide {
-    from {
-      opacity: 100%;
-    }
-    to {
-      opacity: 0%;
-    }
-  }
-
-  @keyframes tiltdown {
-    from {
-      transform: rotate(0) translate(0, 0);
-    }
-    to {
-      transform: rotate(-45deg) translate(-0.8rem, 0.35rem);
-    }
-  }
-  @keyframes tiltup {
-    from {
-      transform: rotate(0) translate(0, 0);
-    }
-    to {
       transform: rotate(45deg) translate(-0.95rem, -0.5rem);
     }
   }

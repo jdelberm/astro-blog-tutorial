@@ -152,6 +152,7 @@ h3 {
   display: none;
   flex-direction: column;
   text-align: center;
+  transition: height 500ms;
 }
 
 .navbar a {
