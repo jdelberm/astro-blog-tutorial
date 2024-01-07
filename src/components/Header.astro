@@ -10,9 +10,6 @@ const title = currentPath.split("/")[1].toUpperCase();
 <style>
   .header-nav {
     padding: 1rem;
-  }
-
-  .header-icons {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -20,15 +17,13 @@ const title = currentPath.split("/")[1].toUpperCase();
 </style>
 <header>
   <nav class="header-nav">
-    <span class="header-icons">
-      <Hamburger />
-      <span style="margin: 0 auto;">
-        <h1 class="title-mobile page-title">
-          {title ? title : "HOME"}
-        </h1>
-      </span>
-      <ThemeIcon />
+    <Hamburger />
+    <span style="margin: 0 auto;">
+      <h1 class="title-mobile page-title">
+        {title ? title : "HOME"}
+      </h1>
     </span>
     <Navigation />
+    <ThemeIcon />
   </nav>
 </header>
