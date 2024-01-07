@@ -137,6 +137,8 @@ h3 {
 }
 
 .title-mobile {
+  margin: 0;
+  font-size: 36px;
   text-align: center;
 }
 
