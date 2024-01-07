@@ -133,12 +133,10 @@ h3 {
 }
 
 .hamburger {
-  padding-right: 20px;
   cursor: pointer;
 }
 
 .title-mobile {
-  padding-right: 6rem;
   text-align: center;
 }
 
