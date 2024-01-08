@@ -87,7 +87,8 @@ html.dark {
   }
 
   .star {
-    filter: invert(100%);
+    filter: invert(100%) blur(2px) drop-shadow(1px 1px 10px yellow);
+    ;
   }
 }
 
