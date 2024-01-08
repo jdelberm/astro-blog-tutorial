@@ -85,6 +85,10 @@ html.dark {
     background: rgb(25, 42, 77);
     background: linear-gradient(126deg, rgba(25, 42, 77, 0.3) 0%, rgba(10, 17, 31, 1) 100%);
   }
+
+  .star {
+    filter: invert(100%);
+  }
 }
 
 .page-title {

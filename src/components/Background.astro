@@ -1,0 +1,54 @@
+---
+import { Image } from "astro:assets";
+import starSVG from "../assets/image/svg/star-alt-4-svgrepo-com.svg";
+
+const starsNumber = 100;
+
+const randomizePosition = () => {
+  return Math.trunc(Math.random() * 115);
+};
+---
+
+<style>
+  .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: black;
+    overflow-y: hidden;
+    pointer-events: none;
+  }
+
+  .star {
+    position: absolute;
+    animation: shining-stars 2s ease-in-out alternate;
+    animation-iteration-count: infinite;
+  }
+
+  @keyframes shining-stars {
+    from {
+      opacity: 5%;
+    }
+    to {
+      opacity: 100%;
+    }
+  }
+</style>
+<div class="background">
+  {
+    Array.from({ length: starsNumber }).map((x) => (
+      <Image
+        class="star"
+        src={starSVG}
+        alt="Star"
+        width="15"
+        style={`
+          top:${randomizePosition()}rem;
+          left:${randomizePosition()}rem;
+          animation-delay: ${Math.random() * 2000}ms;
+          transform: rotate(${Math.random() * 360}deg)
+        `}
+      />
+    ))
+  }
+</div>
