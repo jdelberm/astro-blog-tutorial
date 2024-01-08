@@ -13,20 +13,36 @@ html {
   width: 100%;
   font-family: sans-serif;
   overflow-y: scroll;
-  background-color: #FFFFFF;
+  background-color: #dae7ff;
 
   a {
-    color: black;
+    color: #121354;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #121354;
+  }
+
+  .card {
+    border: 4px black;
+    border-radius: 2rem;
+    padding: 0.2rem 1.5rem;
+    margin: 1rem auto;
+    background: #94b1ff;
+    background: linear-gradient(126deg, #94b1ff20 0%, #4759ff80 100%);
   }
 
   .active {
     color: white;
-    background-color: black;
+    background-color: #121354;
     border-radius: 2rem 0;
   }
 
   .header-nav {
-    background-color: #E5E5E5;
+    background-color: #bcd0ff;
     box-shadow: 3rem black;
   }
 
@@ -87,22 +103,13 @@ html.dark {
   }
 
   .star {
-    filter: invert(100%) blur(2px) drop-shadow(1px 1px 5px yellow);
+    filter: blur(2px) drop-shadow(1px 1px 5px yellow);
     ;
   }
 }
 
 .page-title {
   font-family: "RussoOne";
-}
-
-.card {
-  border: 4px black;
-  border-radius: 2rem;
-  padding: 0.2rem 1.5rem;
-  margin: 1rem auto;
-  background: rgb(25, 42, 77);
-  background: linear-gradient(126deg, rgb(229, 229, 229, 0.2) 0%, rgba(229, 229, 229, 0.8) 100%);
 }
 
 .dark.navbar {
