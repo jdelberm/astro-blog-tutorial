@@ -1,6 +1,5 @@
 ---
 import { Image } from "astro:assets";
-import starSVG from "../assets/image/svg/star-alt-4-svgrepo-com.svg";
 
 const starsNumber = 100;
 
@@ -21,6 +20,10 @@ const randomizePosition = () => {
 
   .star {
     position: absolute;
+    background: black;
+    width: 0.2rem;
+    height: 0.2rem;
+    border-radius: 25px;
     animation: shining-stars 2s ease-in-out alternate;
     animation-iteration-count: infinite;
   }
@@ -37,11 +40,8 @@ const randomizePosition = () => {
 <div class="background">
   {
     Array.from({ length: starsNumber }).map((x) => (
-      <Image
+      <span
         class="star"
-        src={starSVG}
-        alt="Star"
-        width="15"
         style={`
           top:${randomizePosition()}rem;
           left:${randomizePosition()}rem;
