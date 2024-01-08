@@ -24,15 +24,18 @@ const randomizePosition = () => {
     width: 0.2rem;
     height: 0.2rem;
     border-radius: 25px;
-    animation: shining-stars 2s ease-in-out alternate;
+    animation: shining-stars 3s ease-in-out alternate;
     animation-iteration-count: infinite;
   }
 
   @keyframes shining-stars {
-    from {
+    0% {
+      opacity: 100%;
+    }
+    50% {
       opacity: 5%;
     }
-    to {
+    100% {
       opacity: 100%;
     }
   }
