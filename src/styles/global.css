@@ -13,7 +13,7 @@ html {
   width: 100%;
   font-family: sans-serif;
   overflow-y: scroll;
-  background-color: #dae7ff;
+  background-color: #90bcff;
 
   a {
     color: #121354;
@@ -32,7 +32,7 @@ html {
     padding: 0.2rem 1.5rem;
     margin: 1rem auto;
     background: #94b1ff;
-    background: linear-gradient(126deg, #94b1ff20 0%, #4759ff80 100%);
+    background: linear-gradient(126deg, #4759ff30 0%, #4759ff50 100%);
   }
 
   .active {
@@ -42,7 +42,7 @@ html {
   }
 
   .header-nav {
-    background-color: #bcd0ff;
+    background-color: #1a32b370;
     box-shadow: 3rem black;
   }
 
