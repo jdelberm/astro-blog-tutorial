@@ -1,7 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Greeting from "../components/Greeting";
-import Planets from "../components/Planets";
 
 const pageTitle = "Home Page";
 ---
@@ -13,7 +12,6 @@ const pageTitle = "Home Page";
         rerun the JavaScript on the client when the page loads/has any changes-->
       <Greeting messages={["Hi", "Hello", "Howdy", "Hey there"]} />
     </h2>
-    <Planets client:only="react" />
     <p>This tutorial aims to show the basics of the astro framework</p>
     <p>
       The Astro app is hosted in Netlify, so any changes commit will be

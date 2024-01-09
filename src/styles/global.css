@@ -13,7 +13,6 @@ html {
   width: 100%;
   font-family: sans-serif;
   overflow-y: scroll;
-  transition: background-color 250ms ease-in-out;
   background-color: #90bcff;
 
   a {
