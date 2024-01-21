@@ -1,6 +1,5 @@
 import { Canvas, useThree } from '@react-three/fiber'
 import { Stats, OrbitControls } from '@react-three/drei'
-import Moon from "./Moon"
 import Plane from "./Plane"
 import Clouds from "./Clouds"
 import { Suspense } from "react";
@@ -19,7 +18,7 @@ export default function App() {
                 <Suspense fallback={null}>
                     <directionalLight color="white" intensity={4} position={[0, 0, 1]} />
                     <Plane />
-					<Clouds />
+                    <Clouds />
                 </Suspense>
             </Canvas>
         </div >
