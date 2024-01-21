@@ -11,12 +11,12 @@ export default function Clouds() {
     useFrame((state, delta, clock) => {
         //cloudsMesh.current.rotation.y = clock.getElapsedTime() / 10
     })
-    const gltf = useLoader(GLTFLoader, "../../src/assets/models/gltf/stylize_clouds/scene.gltf")
+    const gltf = useLoader(GLTFLoader, "/src/assets/models/gltf/stylize_clouds/scene.gltf")
 
     return (
-		<>
-		<ambientLight intensity={2} />
-        <primitive ref={cloudsMesh} position={[8, 3, -20]} rotation={[0,1,0]} scale={1} object={gltf.scene} />
-		</>
+        <>
+            <ambientLight intensity={2} />
+            <primitive ref={cloudsMesh} position={[8, 3, -20]} rotation={[0, 1, 0]} scale={1} object={gltf.scene} />
+        </>
     )
 }

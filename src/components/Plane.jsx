@@ -21,9 +21,9 @@ export default function Plane() {
         //planehMesh.current.rotation.y = clock.getElapsedTime() / 10
         mixer?.update(delta);
     })
-    const gltf = useLoader(GLTFLoader, "../../src/assets/models/gltf/stylized_ww1_plane/scene.gltf")
+    const gltf = useLoader(GLTFLoader, "/src/assets/models/gltf/stylized_ww1_plane/scene.gltf")
 
     return (
-        <primitive ref={planehMesh} position={[0, -0.2, -5]} rotation={[-0.5,0.7,0]} scale={1} object={gltf.scene} />
+        <primitive ref={planehMesh} position={[0, -0.2, -5]} rotation={[-0.5, 0.7, 0]} scale={1} object={gltf.scene} />
     )
 }
