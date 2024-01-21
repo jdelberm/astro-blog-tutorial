@@ -23,6 +23,8 @@ const { pageTitle } = Astro.props;
     <title>{pageTitle}</title>
     <style>
       .content {
+        position: relative;
+        z-index: 1;
         margin: 0 auto;
         max-width: 50rem;
         height: auto;
@@ -35,10 +37,11 @@ const { pageTitle } = Astro.props;
       }
 
       .header {
+        position: relative;
         z-index: 1;
       }
       .background {
-        z-index: 2;
+        z-index: 0;
       }
 
       .content {
@@ -49,6 +52,8 @@ const { pageTitle } = Astro.props;
       }
 
       .footer {
+        position: relative;
+        z-index: 1;
         height: max-content;
         margin-top: auto;
         padding-bottom: 2rem;

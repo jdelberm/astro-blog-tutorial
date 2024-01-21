@@ -106,6 +106,10 @@ html.dark {
     filter: blur(2px) drop-shadow(1px 1px 5px yellow);
     ;
   }
+
+  #canvas-container{
+	display: none;
+  }
 }
 
 .page-title {

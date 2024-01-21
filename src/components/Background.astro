@@ -1,5 +1,6 @@
 ---
 import { Image } from "astro:assets";
+import Planets from "./3DScene.jsx";
 
 const starsNumber = 100;
 
@@ -15,7 +16,6 @@ const randomizePosition = () => {
     height: 100%;
     color: black;
     overflow-y: hidden;
-    pointer-events: none;
   }
 
   .star {
@@ -43,15 +43,18 @@ const randomizePosition = () => {
 <div class="background">
   {
     Array.from({ length: starsNumber }).map((x) => (
-      <span
-        class="star"
-        style={`
+      <>
+        <span
+          class="star"
+          style={`
           top:${randomizePosition()}rem;
           left:${randomizePosition()}rem;
           animation-delay: ${Math.random() * 2000}ms;
           transform: rotate(${Math.random() * 360}deg)
         `}
-      />
+        />
+      </>
     ))
   }
+  <Planets client:only="react" />
 </div>
