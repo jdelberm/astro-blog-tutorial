@@ -29,17 +29,6 @@ const { frontmatter } = Astro.props;
   }
 </style>
 <BaseLayout pageTitle={frontmatter.title}>
-  <div class="tags-container">
-    {
-      frontmatter.tags.map((tag) => (
-        <p>
-          <a class="card tag-card" href={`/tags/${tag}`}>
-            {tag}
-          </a>
-        </p>
-      ))
-    }
-  </div>
   <img
     class="post-image"
     src={frontmatter.image.url}
@@ -50,6 +39,16 @@ const { frontmatter } = Astro.props;
   <div class="publication-data">
     <p>Written by {frontmatter.author}</p>
     <p>Published on: {frontmatter.pubDate.slice(0, 10)}</p>
+  </div>
+  <div class="tags-container">
+    <p>Tags in this post:</p>
+    {
+      frontmatter.tags.map((tag) => (
+        <p class="tag-card">
+          <a href={`/tags/${tag}`}>{tag}</a>
+        </p>
+      ))
+    }
   </div>
   <slot />
 </BaseLayout>
